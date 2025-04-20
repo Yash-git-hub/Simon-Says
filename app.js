@@ -54,7 +54,7 @@ function levelup() {
 function checkAns(idx) {
     if (userSeq[idx] === gameSeq[idx]) {
         if (userSeq.length == gameSeq.length) {
-            setTimeout(levelup(), 800);
+            setTimeout(levelup(), 1200);
         }
     }
     else {
