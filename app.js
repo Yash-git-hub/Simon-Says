@@ -15,6 +15,15 @@ document.addEventListener("keypress", function () {
     }
     levelup();
 });
+document.addEventListener("touchstart", startGame); 
+
+function startGame() {
+    if (!started) {
+        console.log("Game Started");
+        started = true;
+        levelup();
+    }
+}
 
 function gameflash(button) {
     button.classList.add("flash");
@@ -33,7 +42,7 @@ function userflash(btn) {
 function levelup() {
     userSeq = [];
     level++;
-    h2.innerText = `Level ${level}`;
+    h2.innerHTML = `Level ${level} <br> Highest Score ${HighScore}`;
 
     let randIdx = Math.floor(Math.random() * 4);
     let randColor = btns[randIdx];
@@ -52,7 +61,7 @@ function checkAns(idx) {
         if (level > HighScore) {
             HighScore = level;
         }
-        h2.innerHTML = `Game Over! Your Score was <b>${level}</b> Highest Score ${HighScore} <br> Press any key to restart`;
+        h2.innerHTML = `Game Over! Your Score was <b>${level}</b> <br> Highest Score ${HighScore} <br> Press any key to restart`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function () {
             document.querySelector("body").style.backgroundColor = "white";

@@ -33,3 +33,37 @@ body{
 .userflash{
     background-color: green;
 }
+
+
+
+@media (max-width: 768px) {
+    .btn {
+        width: 120px;
+        height: 120px;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 90px;
+        height: 90px;
+        font-size: 1rem;
+    }
+
+    .line-1, .line-2 {
+        flex-direction: column;
+    }
+
+    .btn-container {
+        gap: 10px;
+    }
+}
