@@ -27,10 +27,11 @@ function startGame() {
 
 function gameflash(button) {
     button.classList.remove("flash");
+    void button.offsetWidth;
     button.classList.add("flash");
     setTimeout(function () {
         button.classList.remove("flash");
-    }, 300);
+    }, 400);
 }
 
 function userflash(btn) {
@@ -55,7 +56,7 @@ function levelup() {
 function checkAns(idx) {
     if (userSeq[idx] === gameSeq[idx]) {
         if (userSeq.length == gameSeq.length) {
-            setTimeout(levelup(), 1200);
+            setTimeout(levelup, 600);
         }
     }
     else {

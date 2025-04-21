@@ -25,8 +25,9 @@ body{
 .purple{
     background-color: #819ff9;
 }
-.flash{
+.flash {
     background-color: white;
+    transition: background-color 0.3s;
 }
 
 
