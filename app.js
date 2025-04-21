@@ -26,6 +26,7 @@ function startGame() {
 }
 
 function gameflash(button) {
+    button.classList.remove("flash");
     button.classList.add("flash");
     setTimeout(function () {
         button.classList.remove("flash");
