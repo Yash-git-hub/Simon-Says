@@ -9,11 +9,11 @@ let btns = ["green", "red", "yellow", "purple"];
 let h2 = document.querySelector("h2");
 
 document.addEventListener("keypress", function () {
-    if (started == false) {
+    if (!started) {
         console.log("Game Started");
         started = true;
+        levelup(); // Only called when the game starts
     }
-    levelup();
 });
 document.addEventListener("touchstart", startGame); 
 
